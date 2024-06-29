@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify
+import os
 
 app = Flask(__name__)
 
@@ -11,4 +12,4 @@ def get_me(nome):
     return jsonify({'nome': nome})
 
 if __name__ == '__main__':
-  app.run(port=5000)
+  app.run(app.run(debug=True, port=os.getenv("PORT", default=5000)))
