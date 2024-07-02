@@ -101,7 +101,7 @@ html,body {
   }
   
   section#inicio {
-    background-image: url("./img/bannerPortifolio.jpg");
+    background-image: url("./img/backgroud.mp4");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -118,6 +118,7 @@ html,body {
   section#inicio span#subtitle {
     margin-right: 8rem;
     font-size: 1.5rem;
+    
   }
   
   .text-shadow {
@@ -158,6 +159,31 @@ html,body {
       left: 0;
   }
   
+.lista-imagens {
+    background-color: rgba(255, 255, 255, 0.118); /* Fundo quase transparente */
+    padding: 20px;
+    width: 400px;
+    margin: 10px auto;
+    border-radius: 8px;
+    text-align: left;
+    margin-left: 200px;
+    margin-bottom: 0;
+  
+}
+.imagem-habilidades {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 5px; /* Espaço entre as imagens */
+}
+.imagem-habilidades:hover {
+    transform: translate3d(-5px, -10px, 0px);
+    transition: 0.3s; /* Animação de 0.3 segundos */
+}
+.imagem-habilidades:last-child {
+    margin-right: 0; /* Remove o espaço após a última imagem */
+}
+
   @media (max-width: 1024px) {
     #header {
       left: -300px;
@@ -176,3 +202,40 @@ html,body {
         margin-left: 0;
     }
   }
+  
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the video to the background */
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    transform: translate(-50%, -50%);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; /* Bring the content in front */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+  
+  p {
+    font-size: 1.5em;
+  }
+  
