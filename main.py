@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
+@app.route('/sobre')
+def sobre():
+  return render_template('sobre.html')
+
 @app.route('/<string:nome>', methods=['GET'])
 def get_me(nome):
     return jsonify({'nome': nome})

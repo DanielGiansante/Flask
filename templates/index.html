@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="../static/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-Ir7Vobn1rhrEPRQkYlMjXjYFXmcL4x/kU4mebZ6S8upzLf2D4Fb8Za5DdGJZ+MhxLaO0g+n5nmL9R0dcxU8Ksw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Daniel Giansante</title>
 </head>
 <body>
@@ -27,10 +28,10 @@
     <nav id="navbar" class="nav-menu">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i>Inicio</a>
+          <a class="nav-link" aria-current="page" href="/"><i class="bi bi-house"></i>Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-person"></i>Sobre</a>
+          <a class="nav-link" href="sobre"><i class="bi bi-person"></i>Sobre</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="bi bi-list-check"></i>Habilidades</a>
@@ -49,41 +50,12 @@
     </nav>
   </aside>
   <main id="main">
-    <section id="inicio" class="row m-0 p-0">
-      <div class="video-background">
-        <video autoplay muted loop>
-            <source src="../static/img/backgroud.mp4" type="video/mp4">
-        </video>
-    </div>
-      <div class="col-md-8 d-flex justify-content-center align-items-center flex-column">
-          <h2 class="text-white text-shadow">Daniel Giansante</h2>
-          <span id="subtitle" class="text-white text-shadow">Desenvolvedor, analista de T.I e DPO.</span>
-        <div id="box" >
-          <img class="imagem-habilidades" src="../static/img/python-svgrepo-com.svg" alt="Imagem SVG 1">
-          <img class="imagem-habilidades" src="../static/img/flask-svgrepo-com.svg" alt="Imagem SVG 2">
-          <img class="imagem-habilidades" src="../static/img/pandas-svgrepo-com.svg" alt="Imagem SVG 3">
-          <img class="imagem-habilidades" src="../static/img/javascript-svgrepo-com.svg" alt="Imagem SVG 4">
-          <img class="imagem-habilidades" src="../static/img/html-5-svgrepo-com.svg" alt="Imagem SVG 5">
-          <img class="imagem-habilidades" src="../static/img/css-3-svgrepo-com.svg" alt="Imagem SVG 6">
-        </div>
-          
-      </div>
-
+    <div id="fullpage">
+      {% include 'inicio.html' %}
+      {% include 'sobre.html' %}
       
-     
-        
-        
-    
-      <div class="col-md-12 d-flex justify-content-end align-items-end">
-          <div id="arraste" class="d-flex align-items-center">
-              <i class="bi bi-arrow-down text-white pe-2 fs-2" aria-hidden="true"></i>
-              <a href="#sobre">Arrate para mais</a>
-          </div>
-
-      </div>
-
-  </section>
-
+  </div>
+   
   </main>
 </body>
 <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
